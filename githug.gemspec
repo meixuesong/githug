@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Gary Rennie"]
   s.email       = ["webmaster@gazler.com"]
   s.homepage    = "https://github.com/Gazler/githug"
-  s.summary     = %q{An interactive way to learn git.}
+  s.summary     = %q{An interactive way to learn git in ZYBank.}
   s.description = %q{An interactive way to learn git.}
 
   s.rubyforge_project = "githug"
