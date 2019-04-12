@@ -1,5 +1,5 @@
 difficulty 1
-description "Set up your git alias 'st' for status', so that you can type it conveniently."
+description "使⽤短别名git st来查看git状态"
 
 setup do
   repo.init
