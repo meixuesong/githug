@@ -44,9 +44,12 @@ end
 
 solution do
   return false if 1 != repo.commits("master")[0].parents.length
-  # solved = false if txt =~ /[<>=|]/
+
+  txt = File.read("file1")
+  return false if txt =~ /[<>=|]/
+  true
 end
 
 hint do
-  puts "Take a look at `git fetch`, `git pull`, and `git rebase`"
+  puts "Take a look at `git fetch`, `git pull`, and `git rebase` 你的日志应该只有4条记录，并且file1的冲突已经解决"
 end
