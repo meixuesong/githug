@@ -1,5 +1,5 @@
 difficulty 4
-description "You need to merge mybranch into the current branch (master). But there may be some incorrect changes in mybranch which may cause conflicts. Solve any merge-conflicts you come across and finish the merge."
+description "你需要将 `mybranch`分支的变更merge到当前分支 (master). 如果有冲突，请把它搞定."
 
 setup do
   init_from_level
@@ -19,5 +19,5 @@ solution do
 end
 
 hint do
-  puts ["First you have to do a merge. Then resolve any conflicts and finish the merge", "Take a look at the sections on merge conflicts in 'git merge'.", "Remove the unnecessary lines in `poem.txt`, so only the correct poem remains."]
+  puts ["首先，你要merge，然后解决冲突。最后别忘了commit."]
 end
