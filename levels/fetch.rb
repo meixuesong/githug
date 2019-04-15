@@ -1,5 +1,6 @@
 difficulty 2
-description "Looks like a new branch was pushed into our remote repository. Get the changes without merging them with the local repository "
+description "获取远程其他同事新创建的特性分⽀的代码，但是不要Merge.
+Looks like a new branch was pushed into our remote repository. Get the changes without merging them with the local repository "
 
 setup do
   # remember the working directory so we can come back to it later

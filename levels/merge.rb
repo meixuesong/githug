@@ -1,8 +1,10 @@
 difficulty 2
-description "We have a file in the branch 'feature'; Let's merge it to the master branch."
+description "你在 feature 分支开发完成了，现在需要合并到 Master分支。"
 
 setup do
 	init_from_level
+
+	`git checkout feature --quiet`
 end
 
 solution do

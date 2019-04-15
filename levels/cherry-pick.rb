@@ -1,9 +1,11 @@
 difficulty 3
-description "Your new feature isn't worth the time and you're going to delete it. But it has one commit that fills in `README` file, and you want this commit to be on the master as well."
+description "你在hotfix分支修复生产环境的紧急问题，现在你已经修复完成，需要单独将这个修复(Filled in README.md with proper input) 合并到master分支."
 
 setup do
     init_from_level
     `git stash` #fix for README.md being in githug root an the level
+    `git checkout new-feature --quiet && git branch -m hotfix --quiet`
+    `git checkout master --quiet`
 end
 
 solution do
