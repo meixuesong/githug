@@ -15,7 +15,7 @@ module Githug
     #           "submodule","contribute"]
 
     LEVELS = [nil, "clone", "alias_st", "alias_lg", "config", "log", 
-      "add", "commit", "ignore", 
+      "add", "commit", "ignore", "stash", "unstash",
       "congratulation"
     ]
 

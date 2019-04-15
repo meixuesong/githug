@@ -1,5 +1,5 @@
 difficulty 2
-description "You've made some changes and want to work on them later. You should save them, but don't commit them."
+description "你已经做了一些修改，现在请暂存它们，并切换到分支`featurehumans-txt`。"
 
 setup do
   init_from_level
@@ -8,6 +8,7 @@ end
 solution do
   return false if `git stash list` !~ /stash@\{0\}/
   return false if repo.status.changed.to_a.flatten.include? "lyrics.txt"
+  return false unless repo.head.name == "featurehumans-txt"
   true
 end
 
