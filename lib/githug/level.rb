@@ -14,7 +14,8 @@ module Githug
     #           "stage_lines", "find_old_branch", "revert", "restore", "conflict",
     #           "submodule","contribute"]
 
-    LEVELS = [nil, "clone", "alias_st", "alias_lg", "config",
+    LEVELS = [nil, "clone", "alias_st", "alias_lg", "config", "log", 
+      "add", "commit", "ignore", 
       "congratulation"
     ]
 
