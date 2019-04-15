@@ -1,5 +1,6 @@
 difficulty 2
-description "You've made some changes to a local branch and want to share it, but aren't yet ready to merge it with the 'master' branch.  Push only 'test_branch' to the remote repository"
+description "你已经创建了本地分支 `test_branch`，开发已经完成，你需要将此分支 push 到远程代码库。
+注意：只能push `test_branch` 分支，不能push其它分支。"
 
 setup do
 
@@ -83,5 +84,5 @@ solution do
 end
 
 hint do
-  puts "Investigate the options in `git push` using `git push --help`"
+  puts "研究一下 `git push` 命令吧，可以使用 `git push --help`"
 end
