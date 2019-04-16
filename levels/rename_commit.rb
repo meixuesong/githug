@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 description "Correct the typo in the message of your first (non-root) commit."
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 description "Merge all commits from the long-feature-branch as a single commit."
 

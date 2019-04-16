@@ -1,8 +1,6 @@
 # MyGithug
 玩游戏一样练习Git操作。 
 
-[![Build Status](https://travis-ci.org/meixuesong/githug?branch=master)](https://travis-ci.org/meixuesong/githug) 
-
 ## About
 
 MyGithub是基于 [Githug](https://github.com/Gazler/githug) 修改的一个练习Git的项目。

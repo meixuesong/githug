@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Notice a few files with the '.a' extension.  We want git to ignore all but the 'lib.a' file."
 

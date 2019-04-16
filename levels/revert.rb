@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 4
 description "你已经在本地做了几次提交，而且所有提交都Push到了远程代码库。现在你发现有一次提交(Bad commit)包含了Bug, 你需要把它回滚掉。"
 

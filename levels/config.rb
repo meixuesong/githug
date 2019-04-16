@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "Set up your git name and email, this is important so that your commits can be identified."
 

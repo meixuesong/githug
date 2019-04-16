@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Config
   attr_accessor :name, :password
   def initialize(name, password = nil, options = {})

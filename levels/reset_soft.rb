@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "You committed too soon. Now you want to undo the last commit, while keeping the index."
 

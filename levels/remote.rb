@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "This project has a remote repository.  Identify it."

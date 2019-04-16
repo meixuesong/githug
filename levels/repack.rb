@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Optimise how your repository is packaged ensuring that redundant packs are removed."
 

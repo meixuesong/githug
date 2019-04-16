@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Java编译后会创建 `.class` 文件和 `target` 文件夹， 这些文件/夹并不需要放到代码库中，请配置Git忽略它们。"
 

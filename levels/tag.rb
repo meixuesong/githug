@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "We have a git repo and we want to tag the current commit with `new_tag`."

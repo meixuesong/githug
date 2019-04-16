@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "You have created your branch from `wrong_branch` and already made some commits, \

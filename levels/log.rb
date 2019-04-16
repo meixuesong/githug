@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "你需要提供最近一次提交的commit id，并找出新增的内容是什么。"

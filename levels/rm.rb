@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "A file has been removed from the working tree, however the file was not removed from the repository.  Find out what this file was and remove it."

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 description "You forgot to branch at the previous commit and made a commit on top of it. Create branch test_branch at the commit before the last."
 

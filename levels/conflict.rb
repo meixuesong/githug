@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 4
 description "你需要将 `mybranch`分支的变更merge到当前分支 (master). 如果有冲突，请把它搞定."
 

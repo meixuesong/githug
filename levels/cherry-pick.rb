@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 description "你在hotfix分支修复生产环境的紧急问题，现在你已经修复完成，需要单独将这个修复(Filled in README.md with proper input) 合并到master分支."
 

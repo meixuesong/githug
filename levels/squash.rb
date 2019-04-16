@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 4
 description "You have committed several times but would like all those changes to be one commit."
 

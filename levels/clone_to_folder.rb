@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "Clone the repository at https://github.com/Gazler/cloneme to `my_cloned_repo`."
 

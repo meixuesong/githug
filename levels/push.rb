@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 description "Your local master branch has diverged from " +
   "the remote origin/master branch. Rebase your branch onto " +

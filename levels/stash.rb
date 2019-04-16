@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "你已经做了一些修改，现在请暂存它们，并切换到分支`featurehumans-txt`。"
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "There are tags in the repository that aren't pushed into remote repository. Push them now."
 

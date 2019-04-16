@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "A test description"
 setup do

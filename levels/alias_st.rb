@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "使⽤短别名git st来查看git状态"
 

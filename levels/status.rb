@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "There are some files in this repository, one of the files is untracked, which file is it?"
 

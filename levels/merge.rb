@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "你在 feature 分支开发完成了，现在需要合并到 Master分支。"
 

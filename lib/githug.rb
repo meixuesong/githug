@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'grit'
 
 require "githug/extensions/grit/ruby1.9"

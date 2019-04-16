@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "你需获取远程的最新代码，请让版本树尽量整洁（只有⼀个树⼲）.过程中如果有冲突，请解决掉它！"
 

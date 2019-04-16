@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "使⽤git lg来查看带有树形结构的提交记录."
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Someone has put a password inside the file `config.rb` find out who it was."
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "We are using a git rebase workflow and the feature branch is ready to go into master. Let's rebase the feature branch onto our master branch."

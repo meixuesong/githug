@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Your project's deadline approaches, you should evaluate how many TODOs are left in your code"
 

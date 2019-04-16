@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "There are some files in this repository, how many of the files will be committed?"
 

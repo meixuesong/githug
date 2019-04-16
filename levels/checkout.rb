@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "Create and switch to a new branch called my_branch.  You will need to create a branch like you did in the previous level."
 

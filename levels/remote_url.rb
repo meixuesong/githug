@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "The remote repositories have a url associated to them.  Please enter the url of remote_location."

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 4
 
 description "You've made changes within a single file that belong to two different features, but neither of the changes are yet staged. Stage only the changes belonging to the first feature."

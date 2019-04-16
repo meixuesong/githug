@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 description "你已经创建了本地分支 `test_branch`，开发已经完成，你需要将此分支 push 到远程代码库。
 注意：只能push `test_branch` 分支，不能push其它分支。"

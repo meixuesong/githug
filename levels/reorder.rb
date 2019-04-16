@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 4
 description "You have committed several times but in the wrong order. Please reorder your commits."
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 2
 
 description "Add a remote repository called `origin` with the url https://github.com/githug/githug"

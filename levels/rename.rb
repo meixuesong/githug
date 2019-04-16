@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 3
 
 description "We have a file called `oldfile.txt`. We want to rename it to `newfile.txt` and stage this change."

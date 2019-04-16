@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 difficulty 1
 description "The `README` file has been added to your staging area, now commit it."
 
