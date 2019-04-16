@@ -3,15 +3,15 @@ $:.push File.expand_path("../lib", __FILE__)
 require "githug/version"
 
 Gem::Specification.new do |s|
-  s.name        = "githug"
+  s.name        = "mygithug"
   s.version     = Githug::VERSION
-  s.authors     = ["Gary Rennie"]
-  s.email       = ["webmaster@gazler.com"]
-  s.homepage    = "https://github.com/Gazler/githug"
-  s.summary     = %q{An interactive way to learn git in ZYBank.}
+  s.authors     = ["Gary Rennie & Mei Xuesong"]
+  s.email       = ["meixuesong@gmail.com"]
+  s.homepage    = "https://github.com/meixuesong/githug"
+  s.summary     = %q{An interactive way to learn git in your workplace.}
   s.description = %q{An interactive way to learn git.}
 
-  s.rubyforge_project = "githug"
+  s.rubyforge_project = "mygithug"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

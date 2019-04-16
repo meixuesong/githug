@@ -1,150 +1,55 @@
-# Githug
-Git Your Game On 
+# MyGithug
+玩游戏一样练习Git操作。 
 
-[![Build Status](https://travis-ci.org/Gazler/githug.svg?branch=master)](https://travis-ci.org/Gazler/githug) [![Code Climate](https://codeclimate.com/github/Gazler/githug.svg)](https://codeclimate.com/github/Gazler/githug)
+[![Build Status](https://travis-ci.org/meixuesong/githug?branch=master)](https://travis-ci.org/meixuesong/githug) 
 
 ## About
-Githug is designed to give you a practical way of learning git.  It has a series of levels, each requiring you to use git commands to arrive at a correct answer.
+
+MyGithub是基于 [Githug](https://github.com/Gazler/githug) 修改的一个练习Git的项目。
+旨在为您提供学习git的实用方法。 它有一系列级别，每个级别都要求您使用git命令来获得正确的答案。
 
 ## Playing Githug
 
-Githug should work on Linux, OS X and Windows.
+MyGithug支持Linux, OS X and Windows.
 
-### Prerequisites
+### 前提条件
 
-Githug requires Ruby 1.8.7 or higher.
-
-You can check which version of Ruby is installed with the following command:
+你需要 Ruby 1.8.7 或更高版本. 你可以通过以下命令获取当前的Ruby版本:
 
 ```
 ruby --version
 ```
 
-If ruby is not installed, follow the installation instructions on [ruby-lang.org](https://www.ruby-lang.org/en/documentation/installation/).
+如果你还没有安装Ruby，请按照官方文档安装：[ruby-lang.org](https://www.ruby-lang.org/en/documentation/installation/).
 
-### Installation
+### 安装
 
-To install Githug, run
+要安装Mygithug，只需要运行：
 
-    gem install githug
+    gem install mygithug
 
-If you get a complaint about permissions, you can rerun the command with `sudo`:
+如果没有权限，你可能需要以管理员身份运行。或者在Linux/Mac下 `sudo`:
 
     sudo gem install githug
 
-### Starting the Game
+### 开始游戏
 
-After the gem is installed change directory to the location where you want the game-related assets to be stored.
-Then run `githug`:
+建议你为此游戏创建一个新的文件夹，然后在该文件夹下运行命令：
 
     githug
 
-You will be prompted to create a directory.
+按照提示，系统会创建一个git_hug文件夹。
 
     No githug directory found, do you wish to create one? [yn]
 
 Type `y` (yes) to continue, `n` (no) to cancel and quit Githug.
 
-### Commands
+### 命令
 
-Githug has 4 game commands:
+游戏有4个命令:
 
- * play - The default command, checks your solution for the current level
- * hint - Gives you a hint (if available) for the current level
- * reset - Reset the current level or reset the level to a given name or path
- * levels - List all the levels
+ * play - 默认命令，检查你是否已经完成当前级别的任务。
+ * hint - 提示信息，在你不知道如何完成任务时，你可能需要它。
+ * reset - 重置命令，将当前任务恢复到初始状态。
+ * levels - 列出所有的游戏级别。
 
-## Change Log
-
-The change log is available on the wiki.  [Change log](https://github.com/Gazler/githug/wiki/Change-Log)
-
-## Contributing
-
-To suggest a level or create a level that has been suggested, check out [the wiki](https://github.com/Gazler/githug/wiki).
-
- Get yourself on the [contributors list](https://github.com/Gazler/githug/contributors) by doing the following:
-
- * Fork the repository
- * Make a level in the levels directory (covered below)
- * Add your level to the LEVELS array inside `lib/githug/level.rb` in a position that makes sense (the "commit" level after the "add" and "init" levels for example)
- * Make sure your level works (covered below)
- * Submit a pull request
-
-## Todo List
-
- * A follow-up to the level, more information on a specific command, etc.
- * More levels!
-
-## Writing Levels
-
-Githug has a DSL for writing levels. Here is an example:
-
-```ruby
-difficulty 1
-description "There is a file in your folder called README, you should add it to your staging area"
-
-setup do
-  repo.init
-  FileUtils.touch("README")
-end
-
-solution do
-  return false unless repo.status.files.keys.include?("README")
-  return false if repo.status.files["README"].untracked
-
-  true
-end
-
-hint do
-  puts "You can type `git` in your shell to get a list of available git commands"
-end
-```
-
- `difficulty`, `description` and `solution` are required.
-
-You can include multiple hints like this:
-
-```ruby
-hints [
-  "You can type `git` in your shell to get a list of available git commands",
-  "Check the man for `git add`"]
-```
-
- By default, `setup` will remove all files from the game folder.  You do not need to include a setup method if you don't want an initial git repository (if you are testing `git init` or only checking an answer.)
-
- You can call `repo.init` to initialize an empty repository.
-
- All methods called on `repo` are sent to the [grit gem](https://github.com/mojombo/grit) if the method does not exist, and you can use that for most git related commands (`repo.add`, `repo.commit`, etc.).
-
-Another method exists called `init_from_level` and it is used like so:
-
-```ruby
-setup do
-  init_from_level
-end
-```
-
-This will copy the contents of a repository specified in the levels folder for your level.  For example, if your level is called "merge" then it will copy the contents of the "merge" folder.  It is recommended that you perform the following steps:
-
- * mkdir "yourlevel"
- * cd "yourlevel"
- * git init
- * some git stuff
- * **important** rename ".git" to ".githug" so that it isn't treated as a submodule
- * cd "../"
- * git add "yourlevel"
-
-After doing this, your level should be able to copy the contents from that git repository and use those for your level.  See the "blame" level for an example of this.
-
-## Testing Levels
-
-The easiest way to test a level is:
-
- * Change into your git_hug repository
- * Run `githug reset PATH_TO_YOUR_LEVEL`
- * Solve the level
- * Run `githug test PATH_TO_YOUR_LEVEL`
-
-Please note that the `githug test` command can be run as `githug test --errors` to get an error stack trace from your solve method.
-
-It would be ideal if you add an integration test for your level.  These tests live in `spec/githug_spec` and **must** be run in order.  If you add a level but do not add a test, please add a simple `skip_level` test case similar to the `contribute` level.
