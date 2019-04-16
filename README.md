@@ -30,13 +30,13 @@ ruby --version
 
 如果没有权限，你可能需要以管理员身份运行。或者在Linux/Mac下 `sudo`:
 
-    sudo gem install githug
+    sudo gem install mygithug
 
 ### 开始游戏
 
 建议你为此游戏创建一个新的文件夹，然后在该文件夹下运行命令：
 
-    githug
+    mygithug
 
 按照提示，系统会创建一个git_hug文件夹。
 
@@ -53,3 +53,23 @@ Type `y` (yes) to continue, `n` (no) to cancel and quit Githug.
  * reset - 重置命令，将当前任务恢复到初始状态。
  * levels - 列出所有的游戏级别。
 
+常用命令示例：
+
+默认命令 play
+```
+> mygithug play
+或者
+> mygithug
+```
+
+提示信息 hint
+
+```
+> mygithug hint
+```
+
+重置第3关 reset
+
+```
+> mygithug reset 3
+```
