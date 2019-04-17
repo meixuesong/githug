@@ -18,7 +18,8 @@ module Githug
     LEVELS = [nil, "clone", "alias_st", "alias_lg", "config", "log", 
       "add", "commit", "ignore", "stash", "unstash",
        "pull",  "pull_rebase", "conflict", "rebase_conflict", "push_branch",
-       "fetch", "revert", "merge", "cherry-pick",
+       # "fetch",
+        "revert", "merge", "cherry-pick",
       "congratulation"
     ]
 

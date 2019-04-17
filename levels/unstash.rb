@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 difficulty 2
-description "你之前做了一些修改，并且暂存了它们，然后你又切换到了分支`featurehumans-txt`。
-现在请切回到master，并恢复你之前做的修改。
+description "你之前做了一些修改，并且暂存了它们，你当前位于分支`featurehumans-txt`。
+现在请切回到master，恢复你之前暂存的内容，以便继续修改。
 "
 
 setup do

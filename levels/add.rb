@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 difficulty 1
-description "你已经创建了文件 README, 请把它加到Stage区.
+description "你已经创建了文件 README, 请把它加到Stage区. 并且观察file2.txt在工作区-Stage-Head间有哪些变化。
 Note: You start each level with a new repo. Don't look for files from the previous one."
 
 setup do
