@@ -13,14 +13,21 @@ module Githug
     #           "delete_branch", "push_branch", "merge", "fetch", "rebase", "rebase_onto", "repack", "cherry-pick",
     #           "grep", "rename_commit", "squash", "merge_squash", "reorder", "bisect",
     #           "stage_lines", "find_old_branch", "revert", "restore", "conflict",
-    #           "submodule","contribute"]
+    #           "submodule","contribute"] 
 
-    LEVELS = [nil, "clone", "alias_st", "alias_lg", "config", "log", 
+    LEVELS = [nil, "config", "clone", "alias_st", "alias_lg",  "log", 
       "add", "commit", "ignore", "stash", "unstash",
        "pull",  "pull_rebase", "conflict", "rebase_conflict", "push_branch",
        # "fetch",
         "revert", "merge", "cherry-pick",
-      "congratulation"
+      "congratulation", "rm", "rm_cached", "tag", "push_tags", "commit_amend",
+      "reset", "reset_soft", "checkout_file", "remote",
+              "remote_url", "remote_add", "push", "diff", "blame", "branch",
+              "checkout", "checkout_tag", "checkout_tag_over_branch", "branch_at",
+              "delete_branch", "fetch", "rebase", "rebase_onto", "repack", 
+              "grep", "rename_commit", "squash", "merge_squash", "reorder", "bisect",
+              "stage_lines", "find_old_branch",  "restore",
+              "submodule","contribute"
     ]
 
     attr_accessor :level_no, :level_path, :level_name
