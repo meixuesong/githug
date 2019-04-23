@@ -24,7 +24,8 @@ module Githug
       "reset", "reset_soft", "checkout_file", "remote",
               "remote_url", "remote_add", "push", "diff", "blame", "branch",
               "checkout", "checkout_tag", "checkout_tag_over_branch", "branch_at",
-              "delete_branch", "fetch", "rebase", "rebase_onto", "repack", 
+              "delete_branch", "fetch", "rebase", "rebase_onto", 
+              # "repack", 
               "grep", "rename_commit", "squash", "merge_squash", "reorder", "bisect",
               "stage_lines", "find_old_branch",  "restore",
               "submodule","contribute"

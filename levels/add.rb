@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 difficulty 1
-description "你已经创建了文件 README, 请把它加到Stage区. 并且观察file2.txt在工作区-Stage-Head间有哪些变化。
+description "你已经创建了文件 README, 请把它加到Stage区，注意保持另一个文件file2不变。观察file2.txt在工作区-Stage-Head间有哪些变化。
 Note: You start each level with a new repo. Don't look for files from the previous one."
 
 setup do
@@ -27,5 +27,5 @@ solution do
 end
 
 hint do
-  puts "You can type `git` in your shell to get a list of available git commands."
+  puts "你需要使用`git add` 和`git diff`命令。必要时加上`--cached`参数."
 end

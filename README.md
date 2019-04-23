@@ -43,28 +43,28 @@ ruby --version
 
 默认命令 play
 ```
-> mygithug play
+> mg play
 或者
-> mygithug
+> mg
 ```
 
 提示信息 hint
 
 ```
-> mygithug hint
+> mg hint
 ```
 
 重置第3级任务 reset
 
 ```
-> mygithug reset 3
+> mg reset 3
 ```
 
 ### 开始游戏
 
 你为此游戏创建一个新的文件夹，然后在该文件夹下运行命令：
 
-    mygithug
+    mg
 
 按照提示，系统默认会再次创建一个git_hug文件夹。
 
@@ -81,10 +81,10 @@ cd git_hug
 每完成一个任务，就执行命令：
 
 ```
-mygithug
+mg
 ```
 
-系统会检查你的任务是否成功完成，如果已经完成，则自动进入下一个任务，否则继续完成你的任务。遇到困难时，可以使用 `mygithug hint`命令获取帮助。
+系统会检查你的任务是否成功完成，如果已经完成，则自动进入下一个任务，否则继续完成你的任务。遇到困难时，可以使用 `mg hint`命令获取帮助。
 
 
 
