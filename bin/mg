@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 require 'githug/cli'
 
+STDOUT.sync = true
+
 Githug::CLI.start

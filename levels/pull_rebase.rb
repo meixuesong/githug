@@ -20,24 +20,41 @@ setup do
   repo.add        "file1"
   repo.commit_all "first commit"
 
+
   # change back to original repo to set up a remote
   Dir.chdir cwd
-  `git remote add origin #{tmpdir}/.git  2> /dev/null`
-  `git fetch origin  2> /dev/null`
-  `git branch -u origin/master master  2> /dev/null`
+
+  `git remote add origin #{tmpdir}/.git `
+
+  `git fetch origin --quiet`
+  # `git branch -u origin/master master`
 
   # 处理本地repo
   `git pull origin master --quiet`
-  `echo "Hello" >> file1 && git add file1  2> /dev/null && git commit -m "Second commit"  2> /dev/null`
+
+  File.open("file1", "a") do | f |
+    f.write "Hello\n"
+  end
+
+  `git add file1`
+  `git commit -m "Second commit" --quiet`
 
   Dir.chdir tmpdir
   FileUtils.touch "file2"
-  `echo "Hello" >> file2 && git add file2  2> /dev/null && git commit -m "Third commit"  2> /dev/null`
+  File.open("#{tmpdir}/file2", "w") do | f |
+    f.write "Hello\n"
+  end
+  `git add file2`
+  `git commit -m "Third commit"  --quiet`
 
   Dir.chdir cwd
   FileUtils.touch "file3"
-  `echo "Hello" >> file3  && git add file3  2> /dev/null && git commit -m "Forth commit"  2> /dev/null`
-  `git branch --set-upstream-to=origin/master master  2> /dev/null`
+  File.open("#{cwd}/file3", "w") do | f |
+    f.write "Hello\n"
+  end
+  `git add file3`
+  `git commit -m "Forth commit"  --quiet`
+  `git branch --set-upstream-to=origin/master master`
 
 end
 

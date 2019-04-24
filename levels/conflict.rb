@@ -4,6 +4,9 @@ description "你需要将 `mybranch`分支的变更merge到当前分支 (master)
 
 setup do
   init_from_level
+
+  `git add .`
+  `git commit -m "fix a bug" --quiet`
 end
 
 solution do

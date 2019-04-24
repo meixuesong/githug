@@ -5,11 +5,13 @@ description "你需要提供最近一次提交的commit id，并找出新增的�
 
 setup do
   repo.init
-  file = File.new("newfile.txt", "w")
+
+    # begin
+  File.open("newfile.txt", "w") do | f |
+    f.write "Hello\n"
+  end
+
   repo.add("newfile.txt")
-
-  `echo "Hello" >> newfile.txt`
-
   repo.commit_all("THIS IS THE COMMIT YOU ARE LOOKING FOR!")
 end
 

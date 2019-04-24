@@ -8,8 +8,15 @@ setup do
   FileUtils.touch("README")
   FileUtils.touch("file2.txt")
 
-  `echo "Hello" >> README`
-  `git add file2.txt && echo "NEWlINE" >> file2.txt`
+  File.open("README", "w") do | f |
+    f.write "Hello\n"
+  end
+
+  repo.add("file2.txt")
+
+  File.open("file2.txt", "w") do | f |
+    f.write "NEWlINE\n"
+  end
 
 end
 

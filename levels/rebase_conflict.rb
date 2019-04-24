@@ -22,23 +22,35 @@ setup do
 
   # change back to original repo to set up a remote
   Dir.chdir cwd
-  `git remote add origin #{tmpdir}/.git  2> /dev/null`
-  `git fetch origin  2> /dev/null`
-  `git branch -u origin/master master  2> /dev/null`
+  `git remote add origin #{tmpdir}/.git`
+  `git fetch origin  --quiet`
+  # `git branch -u origin/master master  2> /dev/null`
 
   # 处理本地repo
   `git pull origin master --quiet`
-  `echo "My Hello" >> file1 && git add file1  2> /dev/null && git commit -m "Second commit"  2> /dev/null`
+  File.open("#{cwd}/file1", "a") do | f |
+    f.write "My Hello\n"
+  end
+  `git add file1`
+  `git commit -m "Second commit"  --quiet`
 
   Dir.chdir tmpdir
   FileUtils.touch "file1"
-  `echo "My teammate say Hello" >> file1 && git add file1  2> /dev/null && git commit -m "Third commit"  2> /dev/null`
+  File.open("#{tmpdir}/file1", "a") do | f |
+    f.write "My teammate say Hello\n"
+  end
+  `git add file1`
+  `git commit -m "Third commit" --quiet`
 
   #制造冲突
   Dir.chdir cwd
   FileUtils.touch "file1"
-  `echo "Hello" >> file1  && git add file1  2> /dev/null && git commit -m "Forth commit"  2> /dev/null`
-  `git branch --set-upstream-to=origin/master master  2> /dev/null`
+  File.open("#{cwd}/file1", "a") do | f |
+    f.write "Hello\n"
+  end
+  `git add file1`
+  `git commit -m "Forth commit" --quiet`
+  `git branch --set-upstream-to=origin/master master`
 
 
 end

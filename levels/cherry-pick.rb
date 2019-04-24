@@ -5,8 +5,10 @@ description "你在hotfix分支修复生产环境的紧急问题，现在你已�
 setup do
     init_from_level
     `git stash` #fix for README.md being in githug root an the level
-    `git checkout new-feature --quiet && git branch -m hotfix --quiet`
+    `git checkout new-feature --quiet`
+    `git branch -m hotfix --quiet`
     `git checkout master --quiet`
+    
 end
 
 solution do
