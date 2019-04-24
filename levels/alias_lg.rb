@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 difficulty 1
-description "使⽤git lg来查看带有树形结构的提交记录."
+description "使⽤`git lg`来查看带有树形结构的提交记录. 使用`git fl`查看单个文件的提交记录和变更历史。"
 
 setup do
   repo.init
@@ -40,17 +40,21 @@ setup do
 end
 
 solution do
-  valid = false
+  valid = true
 
   config_alias_lg = repo.config["alias.lg"]
+  config_alias_filelg = repo.config["alias.fl"]
 
-  if "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(white)%ad%C(reset) %C(bold green)%s%C(reset) %C(auto)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'" == config_alias_lg
-    valid = true
-  end
+  return false unless "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(dim)%ad%C(reset) %C(cyan)%s%C(reset) %C(dim)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'" == config_alias_lg
+  return false unless "log -M --follow --stat --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(dim)%ad%C(reset) %C(cyan)%s%C(reset) %C(dim)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'" == config_alias_filelg
 
   valid
 end
 
 hint do
-  puts "增加一个git别名，内容如下：log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(white)%ad%C(reset) %C(bold green)%s%C(reset) %C(auto)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'"
+  puts "增加两个别名：git lg 和git fl，分别如下：
+  lg: log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(dim)%ad%C(reset) %C(cyan)%s%C(reset) %C(dim)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'
+  fl: log -M --follow --stat --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(dim)%ad%C(reset) %C(cyan)%s%C(reset) %C(dim)- %an%C(reset)%C(auto)%d%C(reset)'  --date=format:'%Y-%m-%d %H:%M:%S'
+
+  "
 end
